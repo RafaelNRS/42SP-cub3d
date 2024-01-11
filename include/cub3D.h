@@ -6,7 +6,7 @@
 /*   By: ranascim <ranascim@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 07:43:59 by ranascim          #+#    #+#             */
-/*   Updated: 2024/01/11 08:18:33 by ranascim         ###   ########.fr       */
+/*   Updated: 2024/01/11 10:58:57 by ranascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,7 +136,8 @@ typedef struct s_input_keys
 	t_bool		right;
 }				t_input_keys;
 
-typedef struct s_ray {
+typedef struct s_ray
+{
 	int			r;
 	int			mx;
 	int			my;
@@ -156,7 +157,8 @@ typedef struct s_ray {
 	char		eye_h;
 }				t_ray;
 
-typedef struct s_ray_print{
+typedef struct s_ray_print
+{
 	int			ca;
 	int			line_h;
 	int			line_off;
@@ -198,6 +200,7 @@ int				feed_scene_map(t_scene *scene);
 int				is_map_walled(t_scene *scene);
 int				are_map_chars_valid(t_scene *scene);
 int				are_map_players_valid(t_scene *scene);
+void			ft_freethis(char **str, void *content);
 void			init_game(t_game *game, t_scene *scene);
 float			deg_to_rad(float deg);
 float			fix_ang(float ang);
@@ -230,7 +233,5 @@ int				clean_all(t_game *game);
 void			free_ptr(void **ptr);
 int				are_map_chars_valid_utils(t_scene *scene, size_t i, size_t j);
 void			my_mlx_pixel_put(t_img *data, int x, int y, int color);
-void			ft_freethis(char **str, void *content);
-
 
 #endif

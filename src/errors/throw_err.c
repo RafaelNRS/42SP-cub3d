@@ -6,7 +6,7 @@
 /*   By: ranascim <ranascim@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 07:50:19 by ranascim          #+#    #+#             */
-/*   Updated: 2024/01/10 07:51:34 by ranascim         ###   ########.fr       */
+/*   Updated: 2024/01/11 11:14:51 by ranascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,11 @@ to open!\n", 2);
 	if (err == MAP_NOT_WALLED)
 		ft_putstr_fd("The map must be fully walled!\n", 2);
 	if (err == MAP_CHARS_NOT_VALID)
-		ft_putstr_fd("The map must only contain valid characters! (01NWSE )\n", 2);
+		ft_putstr_fd("The map must only contain valid characters! \
+(01NWSE )\n", 2);
 	if (err == MAP_PLAYERS_NOT_VALID)
-		ft_putstr_fd("The map must only contain one player starting position!\n", 2);
+		ft_putstr_fd("The map must only contain one player starting \
+position!\n", 2);
 	if (err == MINILIB_FAILED_WINDOW)
 		ft_putstr_fd("Minilib's windows failed to load!\n", 2);
 	if (err == MINILIB_FAILED_SPRITE)

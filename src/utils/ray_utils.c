@@ -6,7 +6,7 @@
 /*   By: ranascim <ranascim@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 07:57:03 by ranascim          #+#    #+#             */
-/*   Updated: 2024/01/10 07:57:07 by ranascim         ###   ########.fr       */
+/*   Updated: 2024/01/11 10:59:22 by ranascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,8 +100,8 @@ void	vertical_ray_dist(t_game *game, t_ray *ray)
 		ray->mx >= 0 && ray->mx < (int)ft_strlen(game->scene->map[ray->my]) \
 		&& game->scene->map[ray->my][ray->mx] == '1')
 		{
-				ray->dof = game->scene->max_y;
-				ray->dis_h = cos(deg_to_rad(ray->ra)) * (ray->rx - \
+			ray->dof = game->scene->max_y;
+			ray->dis_h = cos(deg_to_rad(ray->ra)) * (ray->rx - \
 				game->player->px) - sin(deg_to_rad(ray->ra)) * \
 				(ray->ry - game->player->py);
 		}
