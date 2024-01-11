@@ -1,10 +1,10 @@
-NO       ./resources/assets/redbrick.xpm
-SO    ./resources/assets/greenbrick.xpm
-WE   ./resources/assets/yellowbrick.xpm
-EA ./resources/assets/bluebrick.xpm
+NO       ./resources/assets/redwall.xpm
+SO    ./resources/assets/mossy.xpm
+WE   ./resources/assets/colorstone.xpm
+EA ./resources/assets/bluestone.xpm
 
-F     250,  127, 114 
-C   250, 170, 148
+F     69, 17, 25 
+C   56, 65, 77
 
         1111111111111111111111111
         1000000000110000000000001
