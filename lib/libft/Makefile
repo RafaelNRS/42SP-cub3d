@@ -58,6 +58,12 @@ OBJ_PATH = ./obj/
 OBJ		= $(SRC:.c=.o)
 OBJECTS = $(addprefix $(OBJ_PATH), $(OBJ))
 
+# Colors
+OFF				:= \033[0m
+RED				:= \033[0;31m
+GREEN			:= \033[0;32m
+BLUE			:= \033[0;34m
+
 all: $(NAME)
 
 $(NAME): $(SOURCES) $(LIBRARIES)
@@ -65,16 +71,16 @@ $(NAME): $(SOURCES) $(LIBRARIES)
 	@ ar -rc $(NAME) $(OBJ)
 	@ mkdir -p obj
 	@ mv $(OBJ) $(OBJ_PATH)
-	@ echo "Library created sucessfully!"
+	@ echo "$(GREEN)$(NAME) created sucessfully!$(OFF)"
 
 clean:
 	@ rm -f $(OBJECTS)
 	@ rm -rf $(OBJ_PATH)
-	@ echo "Object files removed sucessfully!"
+	@ echo "$(RED)Object files removed sucessfully!$(OFF)"
 
 fclean: clean
 	@ rm -f $(NAME)
-	@ echo "Library removed sucessfully!"
+	@ echo "$(RED)Library removed sucessfully!$(OFF)"
 
 re: fclean all
 
