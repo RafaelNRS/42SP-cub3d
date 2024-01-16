@@ -6,7 +6,7 @@
 /*   By: ranascim <ranascim@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 07:52:02 by ranascim          #+#    #+#             */
-/*   Updated: 2024/01/10 07:52:04 by ranascim         ###   ########.fr       */
+/*   Updated: 2024/01/16 18:52:37 by ranascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,17 @@ void	draw_mini_map(t_game *game, int a, int b, int y)
 			if (b >= 0 && b < (int)ft_strlen(game->scene->map[a]))
 			{
 				if (game->player->y == a && game->player->x == b)
-					square(game, x, y, 0x00FF00);
+					square(game, x, y, 0x8000FF);
 				else if (game->scene->map[a][b] == '1')
-					square(game, x, y, 0x000000);
+					square(game, x, y, 0xCC0066);
 				else if (game->scene->map[a][b] == ' ')
 					square(game, x, y, 0x000000);
 				else
 					square(game, x, y, 0xAFAFAF);
 			}
-			x += 22;
+			x += 20;
 		}
-		y += 22;
+		y += 20;
 	}
 }
 

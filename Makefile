@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mleonard <mleonard@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: ranascim <ranascim@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 07:47:02 by ranascim          #+#    #+#              #
-#    Updated: 2024/01/11 15:41:46 by mleonard         ###   ########.fr        #
+#    Updated: 2024/01/16 19:21:57 by ranascim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,27 +17,27 @@ HEADER			= cub3D.h
 HEADER_PATH		= $(addprefix $(HEADER_DIR), $(HEADER))
 SRC_DIR			= ./src/
 SRC				=	main.c \
-					errors/throw_err.c \
+					errors/error_utils.c \
 					validation/input_validation.c \
 					validation/scene_validation.c \
-					initialization/scene_initialization.c \
-					initialization/game_initialization.c \
-					initialization/feed_textures_and_colors.c \
-					initialization/feed_textures_and_colors_2.c \
-					initialization/feed_textures_and_colors_3.c \
-					initialization/rgb_funcs.c \
-					initialization/rgb_utils.c \
-					initialization/feed_map.c \
-					initialization/feed_map_2.c \
-					close_utils/close_scene.c \
-					close_utils/close_all.c  \
+					game_initialization/scene_initialization.c \
+					game_initialization/game_initialization.c \
+					game_initialization/feed_textures_and_colors.c \
+					game_initialization/feed_textures_and_colors_2.c \
+					game_initialization/feed_textures_and_colors_3.c \
+					game_initialization/rgb_funcs.c \
+					game_initialization/rgb_utils.c \
+					game_initialization/feed_map.c \
+					game_initialization/feed_map_2.c \
+					cleanup/close_scene.c \
+					cleanup/close_all.c  \
 					utils/math_utils.c \
 					utils/key_utils.c \
 					utils/ray_utils.c \
 					utils/draw_utils.c \
 					utils/draw_utils2.c \
-					game/main_game.c \
-					game/move.c
+					game_play/main_game.c \
+					game_play/move.c
 SRC_PATH		= $(addprefix $(SRC_DIR), $(SRC))
 
 # Libft

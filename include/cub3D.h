@@ -6,38 +6,25 @@
 /*   By: ranascim <ranascim@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 07:43:59 by ranascim          #+#    #+#             */
-/*   Updated: 2024/01/11 10:58:57 by ranascim         ###   ########.fr       */
+/*   Updated: 2024/01/16 19:19:20 by ranascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
 
-/* MiniLibX Library */
-//# include <mlx.h>
-
-/* Native libraries */
-
 # include <stdlib.h>
 # include <math.h>
 
-/* open() function includes */
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
 
-/* read() and close() include */
 # include <unistd.h>
-
-/* Libft */
 
 # include <libft.h>
 
-/* MiniLibX */
-
 # include <mlx.h>
-
-/* Define */
 
 # define NUM_PARAM 1
 # define WRONG_FILE 2
@@ -57,7 +44,7 @@
 # define VALID_CHAR_V "0NSEW"
 # define MAP_X 800
 # define MAP_Y 600
-# define MAP_S 64 // tamanho da sprite
+# define MAP_S 64
 # define KEY_ESC 65307
 # define KEY_W 119
 # define KEY_A 97
@@ -69,8 +56,6 @@
 # define KEY_RIGHT 65363
 # define ROT_SPEED 1.6
 # define MOVE_SPEED 2.0
-
-/* Structs */
 
 typedef enum e_bool
 {
