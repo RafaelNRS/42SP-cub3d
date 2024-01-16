@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ranascim <ranascim@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: mleonard <mleonard@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 07:47:02 by ranascim          #+#    #+#              #
-#    Updated: 2024/01/16 20:41:01 by ranascim         ###   ########.fr        #
+#    Updated: 2024/01/16 20:51:00 by mleonard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,7 @@ RED				:= \033[0;31m
 GREEN			:= \033[0;32m
 BLUE			:= \033[0;34m
 
+$(NAME): all
 
 all: $(BINARY_OUT)
 
