@@ -6,7 +6,7 @@
 #    By: ranascim <ranascim@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 07:47:02 by ranascim          #+#    #+#              #
-#    Updated: 2024/01/16 19:21:57 by ranascim         ###   ########.fr        #
+#    Updated: 2024/01/16 20:41:01 by ranascim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,44 +64,28 @@ BLUE			:= \033[0;34m
 all: $(BINARY_OUT)
 
 $(BINARY_OUT): $(SRC_PATH) $(HEADER_PATH)
-	@ echo "$(BLUE)Compiling libft...$(OFF)"
+	@ echo "$(BLUE)[INFO] Compiling libft...$(OFF)"
 	@ $(MAKE) -C $(LIBFT_DIR)
 	@ cp $(LIBFT) $(NAME)
-	@ echo "$(GREEN)Libft compiled successfully! $(OFF)"
-	@ echo "$(BLUE)Compiling $(NAME)...$(OFF)"
+	@ echo "$(GREEN)[INFO] Libft compiled. $(OFF)"
+	@ echo "$(BLUE)[INFO] Compiling $(NAME)...$(OFF)"
 	@ mkdir -p $(BIN)
 	@ $(CC) $(CFLAGS) $(SRC_PATH) -I $(HEADER_DIR) -I $(HEADER_LIBFT) -L $(LIBFT_DIR) -lft $(MLXFLAGS) -o $(NAME)
 	@ mv $(NAME) $(BIN)
-	@ echo "$(GREEN)$(NAME) compiled successfully!$(OFF)"
+	@ echo "$(GREEN)[INFO] $(NAME) compiled.$(OFF)"
 
 clean:
-	@ echo "$(BLUE)Erasing libft files...$(OFF)"
+	@ echo "$(BLUE)[INFO] Erasing libft files...$(OFF)"
 	@ $(MAKE) clean -C $(LIBFT_DIR)
-	@ echo "$(RED)Libft object files erased successfully!$(OFF)"
+	@ echo "$(RED)[INFO] Libft object files erased.$(OFF)"
 
 fclean: clean
 	@ $(MAKE) fclean -C $(LIBFT_DIR)
-	@ echo "$(BLUE)Erasing files related to $(NAME)...$(OFF)"
+	@ echo "$(BLUE)[INFO] Erasing files related to $(NAME)...$(OFF)"
 	@ rm -f $(BINARY_OUT)
 	@ rm -rf $(BIN)
-	@ echo "$(RED)$(NAME) binaries erased successfully!$(OFF)"
+	@ echo "$(RED)[INFO] $(NAME) binaries erased.$(OFF)"
 
 re: fclean all
-
-leaks:
-	@ $(MAKE) -C $(LIBFT_DIR)
-	@ cp $(LIBFT) $(NAME)
-	@ mkdir -p $(BIN)
-	@ $(CC) $(CFLAGS) $(SRC_PATH) -I $(HEADER_DIR) -I $(HEADER_LIBFT) -L $(LIBFT_DIR) -lft $(MLXFLAGS) -o $(NAME)
-	@ mv $(NAME) $(BIN)
-	@ echo "$(GREEN)$(NAME) with leak check option compiled successfully!$(OFF)"
-
-simple:
-	@ $(MAKE) -C $(LIBFT_DIR)
-	@ cp $(LIBFT) $(NAME)
-	@ mkdir -p $(BIN)
-	@ $(CC) $(CFLAGS) $(SRC_PATH) -I $(HEADER_DIR) -I $(HEADER_LIBFT) -L $(LIBFT_DIR) -lft $(MLXFLAGS) -o $(NAME)
-	@ mv $(NAME) $(BIN)
-	@ echo "$(GREEN)$(NAME) without compile flags compiled successfully!$(OFF)"
 
 .PHONY: all clean fclean re
