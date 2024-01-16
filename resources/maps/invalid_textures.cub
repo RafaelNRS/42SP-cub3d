@@ -1,15 +1,10 @@
+N       ./resources/assets/these.xpm
+SO    ./resources/assets/do.xpm
+WE   ./resources/assets/not.xpm
+EA ./resources/assets/exist.xpm
 
-SO    ./resources/assets/greenbrick.xpm
-
-
-
-
-EA ./resources/assets/yellowbrick.xpm
-
-F         230,100,0
-WE   ./resources/assets/redbrick.xpm
-C     225,30,84
-NO       ./resources/assets/bluebrick.xpm
+F 220,100,855
+C 225,30,0
 
 1111111111111111111111111
 1000000000110000000000001
