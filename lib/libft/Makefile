@@ -71,16 +71,16 @@ $(NAME): $(SOURCES) $(LIBRARIES)
 	@ ar -rc $(NAME) $(OBJ)
 	@ mkdir -p obj
 	@ mv $(OBJ) $(OBJ_PATH)
-	@ echo "$(GREEN)$(NAME) created sucessfully!$(OFF)"
+	@ echo "$(GREEN)[INFO] $(NAME) created.$(OFF)"
 
 clean:
 	@ rm -f $(OBJECTS)
 	@ rm -rf $(OBJ_PATH)
-	@ echo "$(RED)Object files removed sucessfully!$(OFF)"
+	@ echo "$(RED)[INFO] Object files removed.$(OFF)"
 
 fclean: clean
 	@ rm -f $(NAME)
-	@ echo "$(RED)Library removed sucessfully!$(OFF)"
+	@ echo "$(RED)[INFO] Library removed.$(OFF)"
 
 re: fclean all
 
