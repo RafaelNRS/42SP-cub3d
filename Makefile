@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mleonard <mleonard@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: ranascim <ranascim@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 07:47:02 by ranascim          #+#    #+#              #
-#    Updated: 2024/01/16 20:51:00 by mleonard         ###   ########.fr        #
+#    Updated: 2024/01/16 21:04:07 by ranascim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,15 +20,15 @@ SRC				=	main.c \
 					errors/error_utils.c \
 					validation/input_validation.c \
 					validation/scene_validation.c \
-					game_initialization/scene_initialization.c \
-					game_initialization/game_initialization.c \
-					game_initialization/feed_textures_and_colors.c \
-					game_initialization/feed_textures_and_colors_2.c \
-					game_initialization/feed_textures_and_colors_3.c \
+					game_initialization/scene_init.c \
+					game_initialization/game_init.c \
+					game_initialization/texture_and_color_init.c \
+					game_initialization/texture_and_color_init_2.c \
+					game_initialization/texture_and_color_init_3.c \
 					game_initialization/rgb_funcs.c \
 					game_initialization/rgb_utils.c \
-					game_initialization/feed_map.c \
-					game_initialization/feed_map_2.c \
+					game_initialization/map_init.c \
+					game_initialization/map_init_2.c \
 					cleanup/close_scene.c \
 					cleanup/close_all.c  \
 					utils/math_utils.c \
